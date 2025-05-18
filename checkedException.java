@@ -26,17 +26,17 @@ public class checkedException {
      * @param durasiDalamMilisekon Jeda per iterasi (ms).
      */
     public static void LoadingTipe2(int durasiDalamMilisekon) {
-        System.out.println("Tunggu sesaat");
+        System.out.print("Tunggu sesaat");
         try {
             for (int i = 0; i < 5; i++) {
                 Thread.sleep(durasiDalamMilisekon); // Potensi InterruptedException
+                System.out.print(".");
             }
         } catch (InterruptedException e) { // Menangkap jika terjadi interupsi
-            System.out.println("Exception saat loading tipe 2: " + e.getMessage());
-            Thread.currentThread().interrupt(); // Set ulang status interupsi
+            System.out.println("\nException saat loading tipe 2: " + e.getMessage());
         } finally {
             // Dieksekusi terlepas dari ada atau tidaknya exception.
-            System.out.println("Loading tipe 2 selesai");
+            System.out.println("\nLoading tipe 2 selesai");
         }
     }
 
@@ -50,14 +50,13 @@ public class checkedException {
             LoadingTipe1(600);
         } catch (InterruptedException e) {
             System.out.println("\nError di main (LoadingTipe1): " + e.getMessage());
-            Thread.currentThread().interrupt();
         } finally {
-            System.out.print("\nLoadingTipe1 selesai (dari main).\n\n");
+            System.out.print("\nLoadingTipe1 selesai.\n\n");
         }
 
         // Demo LoadingTipe2 (tidak perlu try-catch di sini)
         System.out.println("Mulai LoadingTipe2:");
         LoadingTipe2(1000);
-        System.out.println("LoadingTipe2 selesai (dari main).");
+        System.out.println("\nLoadingTipe2 selesai.");
     }
 }
