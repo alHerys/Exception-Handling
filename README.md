@@ -35,5 +35,3 @@ Program ini mendemonstrasikan penanganan **unchecked exception**, khususnya `jav
     * `java.lang.Exception` (general): Digunakan sebagai *catch block* tambahan untuk menangkap *exception* lain yang mungkin tidak tertangani secara spesifik.
 
 Kedua program ini mengilustrasikan pentingnya *exception handling* dalam membuat program yang robust dan *user-friendly*.
-
-Pada file README.md ini, jelaskan apa itu Thread.sleep pada java dan apa hubungannya dengan checkedException. Jelaskan singkat saja, tidak perlu bertele-tele!
