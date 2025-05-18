@@ -57,6 +57,5 @@ public class checkedException {
         // Demo LoadingTipe2 (tidak perlu try-catch di sini)
         System.out.println("Mulai LoadingTipe2:");
         LoadingTipe2(1000);
-        System.out.println("\nLoadingTipe2 selesai.");
     }
 }
